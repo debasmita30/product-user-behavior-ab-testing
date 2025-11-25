@@ -7,10 +7,15 @@ A Data Science + Product Analytics Project using R, Power BI, SQL concepts, and 
 This project analyzes how a new Smart Recommendation Panel impacts user engagement, funnel performance, and conversion behavior.
 It simulates 50,000+ user sessions using R and builds a multi-page Power BI dashboard for deep product insights.
 It combines:
+
 R (for data simulation + preprocessing)
+
 Power BI (for dashboarding & visualization)
+
 A/B Testing (Variant A vs Variant B)
+
 User Personas (Explorer, Deal Hunter, Targeted Shopper, High Intent)
+
 Funnel Analysis (Visit → Engage → Cart → Convert)
 
 The goal: identify whether the new recommendation panel improves user engagement and conversions, and highlight key behavioral patterns across personas.
@@ -19,20 +24,29 @@ The goal: identify whether the new recommendation panel improves user engagement
 🔗 Add your link here after publishing from Power BI Service.**
 
 This dashboard includes:
-Page 1 — A/B Testing & Funnel Performance
+Page 1 — 
+A/B Testing & Funnel Performance
 
 Conversion uplift
+
 Interaction impact
+
 Variant comparison
+
 Conversion waterfall
+
 Key experiment insights
 
 Page 2 — Funnel Analysis & Stage Efficiency
 
 Funnel shape visualization
+
 Variant drop-off analysis
+
 Stage-wise conversion efficiency
+
 Persona drop-off segmentation
+
 Key bottleneck insights
 
 Screenshots of the Visualizations(R Studio):-
@@ -182,6 +196,7 @@ Conversion probability
 Time-to-conversion efficiency
 
 Personas simulated:
+
 Explorer
 
 Deal Hunter
