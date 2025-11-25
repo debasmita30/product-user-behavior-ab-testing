@@ -198,7 +198,7 @@ JOIN users u
 
 4. Funnel Stage Counts
 
-Equivalent to your R + Power BI funnel metrics.
+Equivalent to R + Power BI funnel metrics.
 
 SELECT
     COUNT(*) AS visits,
@@ -222,7 +222,7 @@ GROUP BY variant;
 
 6. Conversion Rate by Variant
 
-Matches your pA / pB calculations in R.
+Matches pA / pB calculations in R.
 
 SELECT
     variant,
@@ -232,7 +232,7 @@ GROUP BY variant;
 
 7. Persona-Level Drop-Off Analysis
 
-This powers your Persona Funnel Chart on Page-2.
+This powers Persona Funnel Chart on Page-2.
 
 SELECT
     persona,
@@ -283,6 +283,7 @@ GROUP BY interacted_with_panel;
 
 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Repository Structure
 📦 user-behavior-ab-testing
