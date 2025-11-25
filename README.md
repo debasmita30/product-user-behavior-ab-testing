@@ -65,12 +65,18 @@ The experiment tests whether a new Smart Recommendation Panel (Variant B) increa
 User engagement
 
 Add-to-cart activity
+
 Conversion probability
+
 Time-to-conversion efficiency
+
 Personas simulated:
 Explorer
+
 Deal Hunter
+
 Targeted Shopper
+
 High Intent
 
 🧮 R Workflow
@@ -86,16 +92,23 @@ High Intent
   Includes:
   
   session_duration
+  
   pages_visited
+  
   persona-driven interaction probability
+  
   variant boosts
+  
   funnel probabilities (engage → cart → convert)
 
 3. Feature Engineering
-4. 
+   
    engagement_score
+   
    time_to_conversion
+   
    high-engagement buckets
+   
    funnel stage flags
 
 📊 Power BI Dashboard Features
