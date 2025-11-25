@@ -147,6 +147,144 @@ ggplot(uplift_df, aes(x = variant, y = conv_rate, fill = variant)) +
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+SQL Queries Used in This Project
+
+
+These SQL queries illustrate how user-behavior datasets can be processed, aggregated, and analyzed in a realistic Data Science workflow. They match the project’s A/B testing, funnel modeling, and segmentation logic.
+
+1. Create Users Table
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    persona VARCHAR(50),
+    signup_date DATE
+);
+
+2. Create Sessions Table
+CREATE TABLE sessions (
+    session_id INT PRIMARY KEY,
+    user_id INT,
+    variant CHAR(1),
+    session_duration INT,
+    pages_visited INT,
+    interacted_with_panel INT,
+    engaged INT,
+    added_to_cart INT,
+    converted INT,
+    engagement_score FLOAT,
+    time_to_conversion FLOAT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+3. Join Users and Sessions
+
+Useful for combined persona + behavior analysis.
+
+SELECT 
+    s.session_id,
+    s.user_id,
+    u.persona,
+    u.signup_date,
+    s.variant,
+    s.session_duration,
+    s.pages_visited,
+    s.engagement_score,
+    s.converted
+FROM sessions s
+JOIN users u
+    ON s.user_id = u.user_id;
+
+4. Funnel Stage Counts
+
+Equivalent to your R + Power BI funnel metrics.
+
+SELECT
+    COUNT(*) AS visits,
+    SUM(CASE WHEN engaged = 1 THEN 1 END) AS engaged,
+    SUM(CASE WHEN added_to_cart = 1 THEN 1 END) AS added_to_cart,
+    SUM(CASE WHEN converted = 1 THEN 1 END) AS conversions
+FROM sessions;
+
+5. Variant-Level Funnel Metrics
+
+Used to compare A vs B at each funnel step.
+
+SELECT
+    variant,
+    COUNT(*) AS visits,
+    SUM(CASE WHEN engaged = 1 THEN 1 END) AS engaged,
+    SUM(CASE WHEN added_to_cart = 1 THEN 1 END) AS added_to_cart,
+    SUM(CASE WHEN converted = 1 THEN 1 END) AS conversions
+FROM sessions
+GROUP BY variant;
+
+6. Conversion Rate by Variant
+
+Matches your pA / pB calculations in R.
+
+SELECT
+    variant,
+    ROUND(AVG(converted), 4) AS conversion_rate
+FROM sessions
+GROUP BY variant;
+
+7. Persona-Level Drop-Off Analysis
+
+This powers your Persona Funnel Chart on Page-2.
+
+SELECT
+    persona,
+    ROUND(SUM(CASE WHEN engaged = 1 THEN 1 END) * 1.0 / COUNT(*), 3) AS visit_to_engage,
+    ROUND(SUM(CASE WHEN added_to_cart = 1 THEN 1 END) * 1.0 / SUM(engaged), 3) AS engage_to_cart,
+    ROUND(SUM(CASE WHEN converted = 1 THEN 1 END) * 1.0 / SUM(added_to_cart), 3) AS cart_to_conversion
+FROM sessions
+JOIN users USING (user_id)
+GROUP BY persona;
+
+8. Identify High-Intent Power Users
+
+Example of how product teams filter strong-conversion personas.
+
+SELECT
+    user_id,
+    persona,
+    COUNT(*) AS total_sessions,
+    AVG(session_duration) AS avg_duration,
+    SUM(converted) AS conversions
+FROM sessions
+JOIN users USING (user_id)
+GROUP BY user_id, persona
+HAVING SUM(converted) > 0;
+
+9. Time-to-Conversion Insights
+
+Matches Page-3’s time analytics.
+
+SELECT
+    variant,
+    AVG(time_to_conversion) AS avg_time_to_convert,
+    MIN(time_to_conversion) AS fastest_conversion,
+    MAX(time_to_conversion) AS slowest_conversion
+FROM sessions
+WHERE converted = 1
+GROUP BY variant;
+
+10. Interaction Impact on Conversion
+
+This supports the “Panel Interaction → Conversion Lift” visual.
+
+SELECT
+    interacted_with_panel,
+    ROUND(AVG(converted), 4) AS conversion_rate
+FROM sessions
+GROUP BY interacted_with_panel;
+
+
+
+
+
+
+
 Repository Structure
 📦 user-behavior-ab-testing
 │
