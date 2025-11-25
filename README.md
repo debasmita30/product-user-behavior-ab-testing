@@ -2,7 +2,8 @@
 
 A Data Science + Product Analytics Project using R, Power BI, SQL concepts, and A/B Testing
 
-Overview
+Overview:-
+
 This project analyzes how a new Smart Recommendation Panel impacts user engagement, funnel performance, and conversion behavior.
 It simulates 50,000+ user sessions using R and builds a multi-page Power BI dashboard for deep product insights.
 It combines:
