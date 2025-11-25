@@ -72,7 +72,7 @@ High Intent
 
 🧮 R Workflow
 1. Simulate Users
-users <- tibble(
+  users <- tibble(
   user_id = 1:15000,
   persona = sample(personas, 15000, replace = TRUE),
   signup_date = sample(seq(as.Date('2024-01-01'), as.Date('2025-10-31'), by = "day"), 15000, replace = TRUE)
@@ -80,27 +80,18 @@ users <- tibble(
 
 2. Simulate Sessions
 
-Includes:
-
-session_duration
-
-pages_visited
-
-persona-driven interaction probability
-
-variant boosts
-
-funnel probabilities (engage → cart → convert)
+  Includes:
+  session_duration
+  pages_visited
+  persona-driven interaction probability
+  variant boosts
+  funnel probabilities (engage → cart → convert)
 
 3. Feature Engineering
-
-engagement_score
-
-time_to_conversion
-
-high-engagement buckets
-
-funnel stage flags
+   engagement_score
+   time_to_conversion
+   high-engagement buckets
+   funnel stage flags
 
 📊 Power BI Dashboard Features
 ✔ Variant A vs B conversion efficiency
