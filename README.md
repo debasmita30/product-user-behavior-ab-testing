@@ -154,13 +154,15 @@ SQL Queries Used in This Project
 These SQL queries illustrate how user-behavior datasets can be processed, aggregated, and analyzed in a realistic Data Science workflow. They match the project’s A/B testing, funnel modeling, and segmentation logic.
 
 1. Create Users Table
+   
 CREATE TABLE users (
     user_id INT PRIMARY KEY,
     persona VARCHAR(50),
     signup_date DATE
 );
 
-2. Create Sessions Table
+3. Create Sessions Table
+   
 CREATE TABLE sessions (
     session_id INT PRIMARY KEY,
     user_id INT,
@@ -176,7 +178,7 @@ CREATE TABLE sessions (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
-3. Join Users and Sessions
+5. Join Users and Sessions
 
 Useful for combined persona + behavior analysis.
 
@@ -278,9 +280,6 @@ SELECT
     ROUND(AVG(converted), 4) AS conversion_rate
 FROM sessions
 GROUP BY interacted_with_panel;
-
-
-
 
 
 
