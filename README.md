@@ -20,6 +20,7 @@ The goal: identify whether the new recommendation panel improves user engagement
 
 This dashboard includes:
 Page 1 — A/B Testing & Funnel Performance
+
 Conversion uplift
 Interaction impact
 Variant comparison
@@ -27,6 +28,7 @@ Conversion waterfall
 Key experiment insights
 
 Page 2 — Funnel Analysis & Stage Efficiency
+
 Funnel shape visualization
 Variant drop-off analysis
 Stage-wise conversion efficiency
@@ -61,6 +63,7 @@ Experiment Design
 The experiment tests whether a new Smart Recommendation Panel (Variant B) increases:
 
 User engagement
+
 Add-to-cart activity
 Conversion probability
 Time-to-conversion efficiency
@@ -81,6 +84,7 @@ High Intent
 2. Simulate Sessions
 
   Includes:
+  
   session_duration
   pages_visited
   persona-driven interaction probability
@@ -88,6 +92,7 @@ High Intent
   funnel probabilities (engage → cart → convert)
 
 3. Feature Engineering
+4. 
    engagement_score
    time_to_conversion
    high-engagement buckets
