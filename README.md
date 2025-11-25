@@ -23,31 +23,18 @@ The goal: identify whether the new recommendation panel improves user engagement
 **Live Dashboard
 🔗 Add your link here after publishing from Power BI Service.**
 
-This dashboard includes:
+This **PowerBI** dashboard includes:
 Page 1 — 
 A/B Testing & Funnel Performance
 
-Conversion uplift
+<img width="1762" height="697" alt="image" src="https://github.com/user-attachments/assets/8a4051af-f58c-465a-b53f-4f5a046bee99" />
 
-Interaction impact
 
-Variant comparison
-
-Conversion waterfall
-
-Key experiment insights
 
 Page 2 — Funnel Analysis & Stage Efficiency
 
-Funnel shape visualization
+<img width="1764" height="701" alt="image" src="https://github.com/user-attachments/assets/d622ed6d-7af6-4d0b-abed-666d1e11ce00" />
 
-Variant drop-off analysis
-
-Stage-wise conversion efficiency
-
-Persona drop-off segmentation
-
-Key bottleneck insights
 
 Screenshots of the Visualizations(R Studio):-
 
