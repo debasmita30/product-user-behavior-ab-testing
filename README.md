@@ -89,27 +89,27 @@ High Intent
 
 2. Simulate Sessions
 
-  Includes:
+     Includes:
   
-  session_duration
+     session_duration
   
-  pages_visited
+     pages_visited
   
-  persona-driven interaction probability
+     persona-driven interaction probability
   
-  variant boosts
+     variant boosts
   
-  funnel probabilities (engage → cart → convert)
+     funnel probabilities (engage → cart → convert)
 
 3. Feature Engineering
    
-   engagement_score
+     engagement_score
    
-   time_to_conversion
+     time_to_conversion
    
-   high-engagement buckets
+     high-engagement buckets
    
-   funnel stage flags
+     funnel stage flags
 
 📊 Power BI Dashboard Features
 ✔ Variant A vs B conversion efficiency
