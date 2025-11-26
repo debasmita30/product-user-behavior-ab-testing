@@ -21,7 +21,7 @@ Funnel Analysis (Visit → Engage → Cart → Convert)
 The goal: identify whether the new recommendation panel improves user engagement and conversions, and highlight key behavioral patterns across personas.
 
 **Live Dashboard
-🔗 Add your link here after publishing from Power BI Service.**
+🔗 https://app.powerbi.com/view?r=eyJrIjoiNDBjMTYyYmMtMWI2YS00MTUyLWJiMWQtNzM3YmMxOGNmMWMyIiwidCI6ImUxNGU3M2ViLTUyNTEtNDM4OC04ZDY3LThmOWYyZTJkNWE0NiIsImMiOjEwfQ%3D%3D**
 
 This **PowerBI** dashboard includes:
 Page 1 — 
