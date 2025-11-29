@@ -391,4 +391,4 @@ and
 r-code/funnel_feature_engineering.R
 
 Open Power BI dashboard:
-PowerBI/A_B_Test_Dashboard.pbix
+https://app.powerbi.com/view?r=eyJrIjoiNDBjMTYyYmMtMWI2YS00MTUyLWJiMWQtNzM3YmMxOGNmMWMyIiwidCI6ImUxNGU3M2ViLTUyNTEtNDM4OC04ZDY3LThmOWYyZTJkNWE0NiIsImMiOjEwfQ%3D%3D
